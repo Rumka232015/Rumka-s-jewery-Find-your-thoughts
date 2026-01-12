@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Бижута с Душа — гр. Русе</title>
+  <meta name="description" content="Уникални ръчно изработени аксесоари и бижута — лично предаване в гр. Русе." />
+  <style>
+    :root{
+      --bg:#f8f4f0;
+      --muted:#666;
+      --accent:#d4a373;
+      --card-bg:#fff;
+      --border:#e6e0db;
+      --max-width:1100px;
+      --radius:8px;
+    }
+    html,body{height:100%;margin:0;font-family:Arial,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;color:#333;background:white}
+    .site{max-width:var(--max-width);margin:0 auto;padding:16px}
+    .hero{background:var(--bg);Padding:36px;border-radius:var(--radius);text-align:center}
+    .hero h1{margin:0 0 8px;font-size:clamp(1.3rem,2.5vw,2rem)}
+    .hero p{margin:6px 0;color:var(--muted)}
+    .local-tag{color:var(--accent);font-weight:700}
+    main{padding:20px 0}
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;align-items:start}
+    .card{background:var(--card-bg);border:1px solid var(--border);padding:12px;border-radius:6px;box-shadow:0 1px 2px rgba(0,0,0,0.03);text-align:center}
+    .card img{width:100%;height:160px;object-fit:cover;border-radius:4px;background:#f4f2f0}
+    .price{color:var(--muted);font-weight:600;margin-top:8px}
+    footer{border-top:1px solid var(--border);padding:16px 0;margin-top:20px;text-align:center;color:var(--muted)}
+    .contact{display:inline-flex;gap:10px;align-items:center}
+    a.tel{color:inherit;text-decoration:none;border:1px solid var(--border);padding:8px 12px;border-radius:6px;background:#fff}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+  </style>
+
+  <!-- Structured data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Бижута с Душа",
+    "description": "Ръчно изработени бижута и аксесоари — лично предаване в гр. Русе.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Русе",
+      "addressCountry": "BG"
+    },
+    "telephone": "088X XXX XXX"
+  }
+  </script>
+</head>
+<body>
+  <div class="site">
+    <header class="hero" role="banner" aria-labelledby="site-title">
+      <h1 id="site-title">Бижута с Душа – гр. Русе</h1>
+      <p>Уникални ръчно изработени аксесоари за русенци.</p>
+      <p class="local-tag" aria-hidden="false">📍 Само за гр. Русе — Лично предаване</p>
+    </header>
+
+    <main role="main" aria-labelledby="products-title">
+      <h2 id="products-title">Моите Творения</h2>
+
+      <section class="products" aria-label="Списък с продукти">
+        <article class="card" role="article" aria-labelledby="p1-title">
+          <img src="jewelry1.jpg" alt="Елегантни обеци — метал и перли" onerror="this.onerror=null;this.src='placeholder.jpg';" />
+          <h3 id="p1-title">Елегантни Обеци</h3>
+          <p class="price">15.00 лв.</p>
+        </article>
+
+        <!-- Example additional card (duplicate or add more as needed) -->
+        <article class="card" role="article" aria-labelledby="p2-title">
+          <img src="jewelry2.jpg" alt="Колие с медальон" onerror="this.onerror=null;this.src='placeholder.jpg';" />
+          <h3 id="p2-title">Колие с Медальон</h3>
+          <p class="price">25.00 лв.</p>
+        </article>
+
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="contact" aria-label="Контакти">
+        <span>Свържете се с мен за поръчка:</span>
+        <!-- tel: link — replace masked number with real number if you want it clickable -->
+        <a class="tel" href="tel:+35988XXXXXXXX" aria-label="Телефон за връзка">088X XXX XXX</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
